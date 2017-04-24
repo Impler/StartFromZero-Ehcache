@@ -1,0 +1,45 @@
+<config xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xmlns='http://www.ehcache.org/v3'
+	xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core.xsd">
+
+	<!-- 被CacheManager管理的完成特定功能的扩展点 -->
+	<service></service>
+	
+	<!-- 定义对象与序列化后的数据之间的转换规则 -->
+	<default-serializers>
+		<serializer type=""></serializer>
+	</default-serializers>
+	
+	<!-- 定义对象复制规则 -->
+	<default-copiers>
+		<copier type=""></copier>
+	</default-copiers>
+	
+	<!-- 用于创建PersistentCacheManager时指定硬盘空间作为存储区域 -->
+	<persistence directory="" />
+	
+	<!-- 定义cache实例 -->
+	<cache alias="" uses-template="">
+		<!-- 定义失效规则 -->
+		<expiry>
+			<class></class>
+			<!-- 永不过期 -->
+			<none/>
+			<!-- time to idle -->
+			<tti></tti>
+			<!-- time to live -->
+			<ttl></ttl>
+		</expiry>
+		
+		<eviction-advisor></eviction-advisor>
+
+		<!-- 定义Tiers -->
+		<resources>
+			<heap unit=""></heap>
+			<offheap unit="" xsi:type=""></offheap>
+			<disk unit="" persistent=""></disk>
+		</resources>
+	</cache>
+	
+	<cache-template></cache-template>
+</config>
